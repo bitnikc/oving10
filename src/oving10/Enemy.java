@@ -4,7 +4,6 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Enemy extends Entity implements Runnable {
 	private int xa, ya;
@@ -35,7 +34,7 @@ public class Enemy extends Entity implements Runnable {
 			setY(getY() + ya);
 		xa = ya = 0;
 	}
-	
+	/*
 	private boolean emptySpot(int x, int y) {
 		for (Entity e: getGame().entities)
 			if (e instanceof Enemy)
@@ -46,6 +45,7 @@ public class Enemy extends Entity implements Runnable {
 					}
 		return true;
 	}
+	*/
 
 	@Override
 	public void draw(Graphics2D g) {

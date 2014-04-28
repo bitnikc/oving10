@@ -37,7 +37,7 @@ public class Game extends JPanel {
 		entities = new ArrayList<Entity>();
 		enemies = 0;
 		running = true;
-		music = new Sound("score.wav");
+		music = new Sound("wtfPADVi.wav");
 		music.play();
 		music.loop();
 		setBounds(0, 0, TILE_SIZE*TILES+7, TILE_SIZE*TILES+30);
@@ -140,6 +140,7 @@ public class Game extends JPanel {
 	public void gameOver() {
 		running = false;
 		pause = true;
+		music.stop();
 		int choice = JOptionPane.showConfirmDialog(
 				this,
 				"You've been caught with "
